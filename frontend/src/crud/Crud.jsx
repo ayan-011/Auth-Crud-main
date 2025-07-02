@@ -106,7 +106,7 @@ const Crud = () => {
               <div className="flex items-center space-x-3 group">
                 <div className="picture h-8 w-8 rounded-full bg-zinc-900 overflow-hidden flex items-center justify-center">
                   {post.photo ? (
-                    <img src={post.photo.startsWith('/uploads/') ? `http://${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}${post.photo}` : post.photo} alt="profile" className="object-cover w-full h-full" />
+                    <img src={post.photo.startsWith('/uploads/') ? `http://localhost:5000${post.photo}` : post.photo} alt="profile" className="object-cover w-full h-full" />
                   ) : null}
                 </div>
                 <span className="name text-gray-400"> {post.name}</span>

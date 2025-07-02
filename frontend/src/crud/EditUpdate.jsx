@@ -64,7 +64,7 @@ const EditUpdate = () => {
             <div className="profilephoto md:w-3/4 h-52 flex justify-center  ">
               <div className="photo bg-zinc-900 w-52 h-full text-white flex items-center justify-center overflow-hidden rounded">
                 {post.photo ? (
-                  <img src={post.photo.startsWith('/uploads/') ? `http://${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}${post.photo}` : post.photo} alt="profile" className="object-cover w-full h-full" />
+                  <img src={post.photo.startsWith('/uploads/') ? `http://localhost:5000${post.photo}` : post.photo} alt="profile" className="object-cover w-full h-full" />
                 ) : (
                   'profile photo'
                 )}

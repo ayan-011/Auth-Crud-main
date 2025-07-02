@@ -8,10 +8,10 @@
 // export default defineConfig({
 //   server:{
 //    proxy: {
-//     //  '/api/auth': 'http://${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}',
-//     //  '/api/crud': 'http://${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}',
+//     //  '/api/auth': 'http://localhost:5000',
+//     //  '/api/crud': 'http://localhost:5000',
 //      '/api': {
-//       target: 'http://${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}',
+//       target: 'http://localhost:5000',
 //       changeOrigin: true,
 //       secure: false,
 //     },
@@ -38,7 +38,7 @@ export default defineConfig({
  server: {
     proxy: {
       '/api': {
-        target: 'http://${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}',
+        target: 'http://localhost:5000',
         changeOrigin: true,
         secure: false,
         rewrite: (path) => path.replace(/^\/api/, '/api') // Explicitly keep /api
