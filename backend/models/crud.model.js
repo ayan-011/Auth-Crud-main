@@ -3,16 +3,18 @@ import mongoose from "mongoose";
 const crudSchema = new mongoose.Schema(
     {
         name: {
-            type: String,
+            type: String, 
             required: [true, "Name is required"]
         },
         title: {
             type: String,
+            unique: false,  // Explicitly set to non-unique
             required: [true, "title is required"],
 
         },
         message: {
             type: String,
+            unique: false,
             required: [true, "message is required"]
         },
         email: {
