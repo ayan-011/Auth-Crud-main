@@ -1,5 +1,5 @@
 {
-    "installerCommand":" npm install --legacy-peer-deps",
+    
     "verson": 2,
     "builds":[
         {
