@@ -4,6 +4,7 @@ import TransitionsModal from '../crud/Modal';
 import axios from 'axios';
 import { Link } from 'react-router-dom'; 
 import { useCrudStore } from '../store/crudStore';
+ 
 
 //Icons
 import { LayoutDashboard } from 'lucide-react';
@@ -60,12 +61,12 @@ const Crud = () => {
 
   return (
     
-    <div className=' w-full h-screen bg-zinc-950 absolute text-center'>
+    <div className=' w-full min-h-screen overflow-y-auto  bg-zinc-950 absolute text-center'>
       <div className='w-full  flex justify-center'>
         
 
-        <div className="bg-zinc-900/40 backdrop-blur-2xl border-r-[1px] border-l-[1px] border-b-[1px] border-zinc-600 w-32 p-2 text-white text-center rounded-b-2xl">
-          <span className='cursor-pointer text-xl hover:text-zinc-300'>
+        <div className=" fixed top-0 z-10 bg-zinc-900/60 backdrop-blur-sm border-r-[1px] border-l-[1px] border-b-[1px] border-zinc-600 w-32 p-3 text-white text-center rounded-b-2xl">
+          <span className=' cursor-pointer hover:text-white text-blue-400 ' >
             <TransitionsModal />
           </span>
 
@@ -74,24 +75,25 @@ const Crud = () => {
 
 
       </div> 
-      <div className='bg-red-90  md:p-4'></div>
-      {/* <div className='bg-blue-90 text-gray-100 text-3xl md:p-5 p-6 '>Create your own post</div> */}
+      <div className='bg-red-90  md:p-9'></div>
 
-      <div className='w-full flex items-center justify-center'>
+      <div className='w-full flex bg-red-90 items-center justify-center'>
 
       <div className="w-3/4 bg-red-90 p-5 flex justify-between items-center text-blue-400 ">
              
              <div className="1">
               <a href="/dashboard"><LayoutDashboard /></a>
              </div>
-             <div className="2 text-3xl text-zinc-300">Make Your Own Post</div>
+             <div className="2 text-3xl text-zinc-300 ">Make Your Own Post</div>
              <div className="3"></div>
 
       </div>
       </div>
 
-      
-      <dic className="Cards lg:w-4/5 w-2/3 sm:2/3 md:w-6/7 bg-red-90 absolute top-[20%] left-1/2 transform -translate-x-1/2 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:p-8  bg-red-90">
+       <div className='bg-red-90 md:p-9'></div>
+      <div className="w-full bg-green-900 h-full overflow-y-auto"> 
+        
+      <div className="Cards bg-blue-90 lg:w-4/5 w-2/3 sm:2/3 md:w-6/7 bg-red-90 absolute   left-1/2 transform -translate-x-1/2 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:p-8  bg-red-90 overflow-y-auto">
 
         {posts.map((post, index) => (
           <div key={index} className="group relative bg-[#25282c]  p-6 w-full sm:w-full lg:w-full flex-1 border-[1px] border-zinc-600 rounded-xl  select-none pointer-event-none  " >
@@ -140,7 +142,10 @@ const Crud = () => {
 
 
 
-      </dic>
+      </div>
+
+
+      </div>
     </div>
 
 

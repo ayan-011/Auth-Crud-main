@@ -106,7 +106,7 @@ export default function TransitionsModal() {
 
 
     <div>
-      <Button onClick={handleOpen}>Post</Button>
+      <div onClick={handleOpen}>Post</div>
       <Modal
 
         aria-labelledby="transition-modal-title"
